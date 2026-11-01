@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: restaura
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/sante
+    envVars:
+      - key: AI_API_KEY
+        sync: false
